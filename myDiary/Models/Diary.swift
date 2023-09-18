@@ -8,17 +8,16 @@
 import Foundation
 
 struct Diary: Codable {
-    var records: [Records]
+    var records: [Records]?
 }
 
 struct Records: Codable {
-    let id: String
-    let createdTime: Date
-    var fields: Fields
+    var id: String?
+    var fields: Fields?
 }
 
 struct Fields: Codable {
-    var data: Date?
+    var date: String?
     var mood: String?
     var eat: String?
     var special: String?
